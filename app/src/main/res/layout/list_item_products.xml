@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_product_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgview_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/offer_img" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_transperency"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imgview_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_bookmark_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/imgview_share"
+                app:layout_constraintTop_toBottomOf="@id/barrier_share" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtview_follower_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11898"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/view_divider"
+                app:layout_constraintRight_toRightOf="@id/view_divider_share"
+                app:layout_constraintTop_toBottomOf="@id/barrier_share" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/view_divider"
+                app:layout_constraintRight_toRightOf="@id/view_divider_share"
+                app:layout_constraintTop_toBottomOf="@id/txtview_follower_value" />
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/grey"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintLeft_toRightOf="@id/imgview_bookmark" />
+
+            <View
+                android:id="@+id/view_divider_share"
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/grey"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/imgview_share" />
+
+            <ImageView
+                android:id="@+id/imgview_share"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_share"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/imgview_bookmark"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier_share" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtview_product_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Lulu market asdfasdfadsasdfasdfa asdf asdsadf asdfadsfsdfas"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/txtview_subCateogry"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/product_imgview"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtview_subCateogry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Sub cateogry"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toRightOf="@id/product_imgview"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtview_product_title" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/product_imgview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/offer_img"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toTopOf="@id/txtview_pages"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtview_pages"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="9 Pages"
+
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/barrier_share"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/txtview_days_left" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtview_days_left"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+
+                android:text="5 Days left"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/barrier_share"
+                app:layout_constraintLeft_toRightOf="@id/txtview_pages"
+                app:layout_constraintRight_toLeftOf="@id/imgview_tick" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="top"
+                app:constraint_referenced_ids="imgview_share,view_divider,imgview_bookmark" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgview_tick"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/barrier_share"
+                app:layout_constraintLeft_toRightOf="@id/txtview_days_left"
+                app:layout_constraintRight_toRightOf="parent"
+                app:srcCompat="@drawable/double_tick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

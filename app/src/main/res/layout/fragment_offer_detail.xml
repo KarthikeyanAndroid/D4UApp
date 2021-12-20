@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.OfferDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/offer_txtview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selected_textview"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="none"
+            android:padding="@dimen/common_margin_10"
+            android:text="@string/offers"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/product_txtview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/product_txtview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/un_selected_textview"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="none"
+            android:padding="@dimen/common_margin_10"
+            android:text="@string/products"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/offer_txtview"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/offer_related_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cons_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin_10"
+        app:layout_constraintTop_toBottomOf="@id/offer_related_recyclerview">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtview_offer_valid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valid"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintTop_toBottomOf="@id/txtview_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_other_catlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtview_offer_valid" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

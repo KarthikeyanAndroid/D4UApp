@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/alert_title"
+app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_800"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/i_would_like"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtview_add_company" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtview_add_company"
+        android:layout_width="match_parent"
+android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="to add my company offers"
+        app:layout_constraintTop_toBottomOf="@id/alert_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtview_list_my_company" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtview_list_my_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="@color/black"
+
+        android:text="to list my company"
+        app:layout_constraintTop_toBottomOf="@id/txtview_add_company" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtview_contact_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="@color/black"
+
+        android:text="to contact me"
+        app:layout_constraintTop_toBottomOf="@id/txtview_list_my_company" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtview_contact_me" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtview_correct_wrong_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="@color/black"
+
+        android:text="to correct a wrong info"
+        app:layout_constraintTop_toBottomOf="@id/txtview_contact_me" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtview_correct_wrong_info" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtview_give_suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="@color/black"
+
+        android:text="to give a suggestion"
+        app:layout_constraintTop_toBottomOf="@id/txtview_correct_wrong_info" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtview_give_suggestion" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtview_feedback" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtview_feedback"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="to give my feedback"
+        app:layout_constraintTop_toBottomOf="@id/txtview_give_suggestion" />
+</androidx.constraintlayout.widget.ConstraintLayout>

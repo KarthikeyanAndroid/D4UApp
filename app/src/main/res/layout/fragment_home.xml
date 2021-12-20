@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/nested_scroll_offers"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".fragment.OffersFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtview_bookmarks_offers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/ic_bookmark"
+            android:text="Bookmark"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/searchview_offers"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txtview_bookmarks_shoppinglist_offers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtview_bookmarks_shoppinglist_offers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/draw_shopping_list"
+            android:text="Shopping List"
+            app:layout_constraintBottom_toBottomOf="@id/searchview_offers"
+            app:layout_constraintLeft_toRightOf="@id/txtview_bookmarks_offers"
+            app:layout_constraintRight_toLeftOf="@id/searchview_offers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchview_offers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/corner_grey_shape"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toBottomOf="@id/txtview_bookmarks_shoppinglist_offers"
+            app:layout_constraintLeft_toRightOf="@id/txtview_bookmarks_shoppinglist_offers"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryBackground="@null"
+            app:queryHint="Search" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="searchview_offers,txtview_bookmarks_shoppinglist_offers" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_maincateogry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="txtview_bookmarks_offers,txtview_bookmarks_shoppinglist_offers,searchview_offers"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_first" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_subcateogry"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview_maincateogry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_cateogrylist"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview_subcateogry" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

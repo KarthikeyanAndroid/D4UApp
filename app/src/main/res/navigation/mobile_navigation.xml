@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/bottom_home">
+
+    <!--<fragment
+        android:id="@+id/nav_home"
+        android:name="com.d4u.shopping.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+  -->
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="com.d4u.shopping.ui.gallery.GalleryFragment"
+        android:label="@string/about_us"
+        tools:layout="@layout/fragment_gallery" />
+
+    <!--
+        <fragment
+            android:id="@+id/nav_slideshow"
+            android:name="com.d4u.shopping.ui.slideshow.SlideshowFragment"
+            android:label="@string/menu_slideshow"
+            tools:layout="@layout/fragment_slideshow" />
+    -->
+
+    <!-- <fragment
+         android:id="@+id/nav_tools"
+         android:name="com.d4u.shopping.ui.tools.ToolsFragment"
+         android:label="@string/menu_tools"
+         tools:layout="@layout/fragment_tools" />
+ -->
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.d4u.shopping.ui.FeedBackFragment"
+        android:label="Feedback"
+        tools:layout="@layout/fragment_feed_back" />
+    <!--
+
+        <fragment
+            android:id="@+id/nav_send"
+            android:name="com.d4u.shopping.ui.send.SendFragment"
+            android:label="@string/menu_send"
+            tools:layout="@layout/fragment_send" />
+    -->
+
+    <fragment
+        android:id="@+id/bottom_home"
+        android:name="com.d4u.shopping.ui.home.OffersFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="OfferId"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_bottom_home_to_settingsFragment"
+            app:destination="@id/nav_settingsfragment" />
+        <action
+            android:id="@+id/action_bottom_home_to_termsAndConditonFragment"
+            app:destination="@id/termsAndConditonFragment" />
+        <action
+            android:id="@+id/action_bottom_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+        <action
+            android:id="@+id/action_bottom_home_to_filterBottomSheetFragment"
+            app:destination="@id/filterBottomSheetFragment" />
+        <action
+            android:id="@+id/action_bottom_home_to_nav_bookmarks"
+            app:destination="@id/nav_bookmarks" />
+        <action
+            android:id="@+id/action_bottom_home_to_offerDetailFragment"
+            app:destination="@id/offerDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottom_product"
+        android:name="com.d4u.shopping.ProductFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_product2">
+        <action
+            android:id="@+id/action_bottom_product_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.d4u.shopping.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/nav_settingsfragment"
+        android:name="com.d4u.shopping.ui.SettingsFragment"
+        android:label="@string/settings" />
+    <fragment
+        android:id="@+id/termsAndConditonFragment"
+        android:name="com.d4u.shopping.ui.TermsAndConditonFragment"
+        android:label="@string/terms_condition">
+        <action
+            android:id="@+id/action_termsAndConditonFragment_to_bottom_home"
+            app:destination="@id/bottom_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.d4u.shopping.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/nav_bookmarks"
+        android:name="com.d4u.shopping.BookMarkFragment"
+        android:label="Book Marks"
+        tools:layout="@layout/fragment_book_mark" />
+    <dialog
+        android:id="@+id/filterBottomSheetFragment"
+        android:name="com.d4u.shopping.FilterBottomSheetFragment"
+        android:label="fragment_filter_bottom_sheet1"
+        tools:layout="@layout/fragment_filter_bottom_sheet1" />
+    <fragment
+        android:id="@+id/offerDetailFragment"
+        android:name="com.d4u.shopping.ui.OfferDetailFragment"
+        android:label="OfferDetails"
+        tools:layout="@layout/fragment_offer_detail" />
+</navigation>
